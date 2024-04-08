@@ -1,0 +1,74 @@
+* {
+  margin: 0 auto;
+}
+
+body {
+  width: 100%;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+}
+
+.h1 {
+  margin: 0 50px;
+  padding: 100px 50px 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+}
+
+.animation_block {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  width: 100%;
+  margin: 20px 0 40px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  --backgroundColor: #232323;
+  --firstColor: #00D69C;
+  --secondColor: #C52AFC;
+  --thirdColor: #FF1F00;
+  --fourthColor: #FFD600;
+  --dropShadowColor: rgba(0, 0, 0, .7);
+}
+
+.blob {
+  margin: auto;
+  height: 350px;
+}
+
+.blob_svg {
+  transform-origin: 50% 50%;
+  animation: move 24s ease-in-out infinite;
+}
+
+@keyframes move {
+  0%   { transform: scale(1)   translate(0, 0) rotate(0); fill: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+  25%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); fill: var(--secondColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+  50%  { transform: scale(0.6) translate(15vw, 5vh) rotate(180deg); fill: var(--thirdColor); filter: drop-shadow( -16px -16px 16px var(--dropShadowColor)); }
+  75%  { transform: scale(0.8) translate(5vw, 10vh) rotate(55deg); fill: var(--fourthColor); filter: drop-shadow( 14px 14px 6px var(--dropShadowColor)); }
+  100% { transform: scale(1)   translate(0, 0) rotate(0); fill: var(--firstColor); filter: drop-shadow( 20px 14px 10px var(--dropShadowColor)); }
+}
+
+.bird_svg {
+  width: 500px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  position: absolute;
+  border-radius: 15px;
+}
+
